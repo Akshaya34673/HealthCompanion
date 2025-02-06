@@ -1,0 +1,146 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 15px 0;
+    color: #ffffff;
+  }
+  
+  .header img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    gap: 10px;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-start;
+    max-width: 70%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    text-align: right;
+    flex-direction: row-reverse;
+    max-width: 70%;
+  }
+  
+  .message.model {
+    align-self: flex-start;
+    text-align: left;
+    flex-direction: row;
+  }
+  
+  .message .msg-header {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    margin: 0 5px 5px 0;
+    background-color: #406340;
+    color: #ffffff;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  .message.model .msg-header {
+    background-color: #162a58;
+  }
+  
+  .message .msg-body {
+    font-size: 16px;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    flex: 1;
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+  
+  .message.model .msg-body {
+    background: none;
+    color: #ffffff;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-top: 1px solid #444;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    gap: 10px;
+  }
+  
+  .footer input {
+    flex: 1;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .footer button {
+    background-color: #3b4252;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer button#attachment {
+    background-color: #3592bd;
+  }
+  
+  .footer button:hover {
+    background-color: #4f5b66;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      margin: 0 20px;
+      padding: 10px;
+    }
+  
+    .footer button,
+    .footer input {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .message {
+      max-width: 90%;
+    }
+  }
+  
