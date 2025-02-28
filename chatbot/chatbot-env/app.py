@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder="templates")
 CORS(app)  # Enable CORS
 
 # Set up Google Gemini API key
-genai.configure(api_key="AIzaSyDgk4UHuPFKdUnQa28JEmsWceKltmqPVgQ")
+genai.configure(api_key=" ")
 
 # Function to get AI response
 def get_gemini_response(user_input):
